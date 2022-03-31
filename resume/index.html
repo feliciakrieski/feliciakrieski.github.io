@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Resume</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                width: 550px;
+                height: 550px;
+                border: 10px solid lightgrey;
+                margin: 50px;
+                margin-bottom: 0px;
+                padding: 20px;
+                border-radius: 20px;
+                box-shadow: rgb(0, 0, 0, 0.3) 0px 1px 30px;
+                font-family: 'Helvetica', sans-serif;
+            }
+
+            .tab {
+                padding: 6px 9px;
+                border: 5px solid lightgrey;
+                float: left;
+                margin: 75px;
+                margin-top: 30px;
+                border-radius: 15px;
+                box-shadow: rgb(0, 0, 0, 0.3) 0px 1px 15px;
+                font-family: 'Helvetica', sans-serif;
+            }
+        </style>
+        <script>
+            var mydata = [
+                '<h1>About Me</h1><br> </br>My name is Felicia Krieski. I am currenly a second year Visual Communication Design student at Universitas Pelita Harapan, majoring in graphic design. I am 19, and turning 20 in a couple months. I have lived in Tangerang my whole life, and am a Christian.',
+                '<h1>My Education</h1><br> </br>Formal Education<br>College<br>Universitas Pelita Harapan (2020 - now)<br>High School<br>UPH College (2017 - 2020)<br>Middle School<br>Sekolah Dian Harapan (2014 - 2017)<br>Elementary School<br>Sekolah Dian Harapan (2010 - 2014)<br>Sekolah Tarsisius Vireta (2008 - 2010)<br>Pre-school<br>Sekolah Tarsisius Vireta (2005 - 2008)<br> <br>Informal Education<br>In the past, I have taken English, Chinese, German lessons outside of school.',
+                '<h1>My Interests</h1><br> </br>I am interested in a lot of things. I love music, and have several favorite artists, such as Rich Brian, NIKI, Lauv, Jeremy Zucker, NCT, BTS, Justin Bieber, XXXTentacion, Juice WRLD, and many others. I also like to watch movies and TV shows. I have watched wide variation of TV shows, ranging from western shows, korean dramas, until animes. My favorites are Friends, Brooklyn Nine-Nine, The Big Bang Theory, How I Met Your Mother, Manifest, 3%, 13 Reasons Why, The Society, Sex Education, The Mist, Alice in Borderland, Kingdom, My Name, All of Us are Dead, Nevertheless, Attack on Titan, Naruto, Fairy Tail, Death Note, Sword Art Online, et cetera.  For movies, I am particularly fond of Marvel Cinematic Universe movies. I also like Harry Potter movies, and loved Disney movies as a child. I also liked playing some games as a child, and I specifically have good memories about playing Pokemon and enjoyed it a lot. Iron Man is my favorite Avenger, and Charmander is my favorite Pokemon. I learned a little Korean and Japanese from watching shows, and taught myself how to read Hangul, draw, and sing. I enjoy singing and rapping. Since late elementary school until mid high school, I enjoy and watched a lot of European football. My favorite football club is Manchester United, but I have not watched many matches since mid high school. I watched a lot of 2014 and 2018 World Cup games. As a child, my parents never really allowed me to play "boyish" sports or practice martial arts. But now that I am an adult, I started taking Muay Thai classes. In terms of martial arts and philosophy, I adore Bruce Lee and wish to learn a little Jeet Kune Do some time in the future. I also like helping others in need, doing social services, donating, and volunteering, as doing it warms my heart a lot, although I do not actually do it that much.'
+            ];
+        </script>
+    </head>
+    <body>
+        <div id="jon" class="box"></div>
+        <div id="tab_one" class="tab" onclick="changecolor('thistle', 'tab_one', mydata[0])">About</div>
+        <div id="tab_two" class="tab" onclick="changecolor('lightpink', 'tab_two', mydata[1 ])">Education</div>
+        <div id="tab_three" class="tab" onclick="changecolor('lightblue', 'tab_three', mydata[2 ])">Interests</div>
+
+    </body>
+</html>
+
+<script>
+    function changecolor (x, y, z) {
+        document.querySelector('#jon').style.backgroundColor = x;
+        document.querySelector('#jon').innerHTML = z;
+        if (y == 'tab_one') {
+            document.querySelector('#tab_one').style.backgroundColor = 'thistle';
+            document.querySelector('#tab_two').style.backgroundColor = 'lightgrey';
+            document.querySelector('#tab_three').style.backgroundColor = 'lightgrey';
+        } else if (y == 'tab_two') {
+            document.querySelector('#tab_one').style.backgroundColor = 'lightgrey';
+            document.querySelector('#tab_two').style.backgroundColor = 'lightpink';
+            document.querySelector('#tab_three').style.backgroundColor = 'lightgrey';
+        } else if (y == 'tab_three') {
+            document.querySelector('#tab_one').style.backgroundColor = 'lightgrey';
+            document.querySelector('#tab_two').style.backgroundColor = 'lightgrey';
+            document.querySelector('#tab_three').style.backgroundColor = 'lightblue';
+        }
+    }
+</script>
